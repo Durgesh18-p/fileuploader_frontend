@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500&display=swap');
+
+*, #root, body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.uploadedFiles, .uploadedFiles span{
+  position: fixed;
+  top :5%;
+  right : 5%;
+  font-weight: 500;
+  font-size: larger;
+}
+
+.uploadedFiles span{
+  top :4.6%;
+  right: 3.5%;
+}
+
+.wrapper{
+  display: flex;
+  width: 58.7vw;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+}
+
+button{
+  cursor: pointer;
+  border: none;
+}
+
+.inputContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem;
+  width: 58.7vw;
+  margin-left: 25rem;
+}
+
+button>input{
+  padding: 1rem;
+  border: 2px solid rgb(99, 114, 253);
+cursor: pointer;
+}
+
+h4{
+  margin-bottom: 5rem;
+  font-size: 1.8rem;
+}
+
+.displayFiles{
+  position: fixed;
+  bottom: 25%;
+  left: 35%;
+  margin-top: 2rem;
+  border: 2px solid black;
+}
+
+.list{
+  list-style: none;
+}
+
+.mainContainer{
+  border: 2px solid red;
+  background: none;
+}
+
+.pdf{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 58.7vw;
+  flex-direction: column;
+  margin-left: 20rem;
+}
+
+.fileWindow{
+  margin-left: 6rem;
+  
+}
+.visibilityButton{
+  width: 10px;
+}
+
+.images button{
+  margin: 2rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+  background-color: rgb(114, 114, 241);
+  color: #000;
+  width: 100px;
+  text-align: center;
+  border: 1px solid black;
+  font-weight: 500;
+}
+
+.text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  width: 58.7vw;
+  margin-left: 20rem;
+}
+
+.images{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  width: 58.7vw;
+  margin-left: 20rem;
+  background: url("./components/Assets/banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image{
+  height: 350px;
+  width: 350px;
+  object-fit: cover;
+  transition: all 1s ease;
+}
+
+.image:hover {
+  box-shadow: -5px 5px 15px rgb(141, 157, 243), 5px 5px 5px rgb(189, 196, 238), 5px -5px 5px rgb(189, 196, 238), -5px -5px 5px rgb(189, 196, 238);
+}
+
+.labels {
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+
+.labels:hover {
+  border-bottom: 1px solid black;
+}
+
+.predectiveView{
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  margin-left: 3rem;
+}
+
+.videos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  width: 58.7vw;
+  margin-left: 20rem;
+}
+
+.video{
+  width: "350px";
+  height: "350px";
+  object-fit: cover;
+}
+
+.videos button{
+  margin: 2rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+  background-color: rgb(114, 114, 241);
+  color: #000;
+  text-align: center;
+  border: 1px solid black;
+  font-weight: 500;
+}
+
+.text button{
+  margin: 2rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+  background-color: rgb(114, 114, 241);
+  color: #000;
+  width: 100px;
+  text-align: center;
+  border: 1px solid black;
+  font-weight: 500;
+}
+
+.paraInfo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  margin-left: 30rem;
+  font-size: 2rem;
+  height: 100vh;
+  width: 100vw;
+}
+
+.fa-solid{
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+}
+
+.arrow-left {
+  z-index: 1;
+  animation: arrowLeftAnimation 2s linear infinite;
+}
+
+.arrow-right {
+  animation: arrowRightAnimation 2s linear infinite; 
+}
+
+@keyframes arrowLeftAnimation {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-20px); 
+  }
+}
+
+@keyframes arrowRightAnimation {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px); 
+  }
+}
+
+
+.pdf button{
+  font-size: 1.1rem;
+  color: #000;
+  width: 100px;
+  text-align: center;
+  border: 1px solid black;
+  position: fixed;
+  top: 5rem;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.label{
+  margin-bottom: 0.5rem;
+}
+
+.submit{
+  margin: 2rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+  background-color: rgb(114, 114, 241);
+  color: #000;
+  width: 100px;
+  text-align: center;
+  border: 1px solid black;
+  font-weight: 500;
+}
+
+.link{
+  margin: 1rem;
+  background: none;
+  font-size: 1.2rem;
+  border: none;
+}
+
+.th{
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+
+.predectiveView{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.videos button{
+  margin-bottom: 5rem;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 4rem;
+  margin-top: 3rem;
+  margin-left: 5rem;
+  width: 100%;
+}
+
+.images>i:hover{
+  cursor: pointer;
+}
+
+.displayContainer{
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+}
+
+.primarySection{
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdownButton{
+  width: 130px;
+  padding: 0.5rem;
+  font-weight: 500;
+  font-size: 01rem;
+  border-radius: 0.3rem;
+  border: 1px solid blue;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.FileVisibility{
+  margin-bottom: 0rem;
+  padding: 0.5rem;
+  font-weight: 500;
+  font-size: 01rem;
+  border-radius: 0.3rem;
+  border: 1px solid blue;
+}
+
+.dropdownlinks{
+  background : transparent;
+  border: none;
+font-weight: 400;
+font-size: 16px;
+}
+
+#visibilityButton{
+  position: fixed;
+  top: 4.5rem;
+  z-index: 1;
+  left: 18.5rem;
+  width: 130px;
+  padding: 0.5rem;
+  font-weight: 500;
+  font-size: 01rem;
+  border-radius: 0.3rem;
+  border-bottom: 1px solid blue;
+}
+
+#predictionButton{
+  position: fixed;
+  top: 4.5rem;
+  z-index: 1;
+  right: 35%;
+  width: 170px;
+  padding: 0.5rem;
+  font-weight: 500;
+  font-size: 01rem;
+  border-radius: 0.3rem;
+  border-bottom: 1px solid blue;
+}
+
+#updatedfilesNotification{
+  color: #002855;
+}
+
+.notification{
+  border-bottom: 1px solid #002855;
+}
+
+
+#updatedfilesNotification {
+  
+  animation: blink 1s infinite; /* Blink animation */
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+
+.checkboxContainer{
+  display: none;
+ display: flex;
+ z-index: 1;
+ margin-top: 1rem;
+  border: 2px solid rgb(6, 6, 241);
+  margin-left: 5.7rem;
+  padding: 0.5rem;
+  transition: text-decoration 0.5s ease;
+}
+
+.checkbox3,.checkbox2,.checkbox1{
+  display: flex;
+  justify-content: center;
+  gap: 0;
+}
+
+.checkbox{
+  margin: 0rem;
+}
+
+.checkboxContainer label{
+  margin: 0rem;
+  width: 60px;
+  transition: text-decoration 0.5s ease;
+}
+
+#selectedFiles{
+  z-index: 1;
+  top : 3%;
+  right: 4%;
+  width: 170px;
+  font-weight: 500;
+  font-size: 01rem;
+  height: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+}
+
+.prediction{
+  background: transparent;
+  font-weight: 500;
+  border: none;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  width: 100vw;
+  }
+
+  .inputContainer{
+    margin-left: 10rem;
+    width: 100vh;
+  }
+
+  .inputContainer>h4{
+    font-size: 3.8rem;
+  }
+
+  .inputContainer button{
+    padding: 3rem;
+  }
+
+  .paraInfo{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16rem;
+    margin-top: 25rem;
+    background-color: #fff;
+    color: #000;
+    font-weight: 800;
+    font-size: 2rem;
+  }
+
+  .headingRow{
+    margin-right: 13rem;
+  }
+
+  .images, .videos, .text, .pdf{
+    margin-left: 28rem;
+    margin-top: 2rem;
+  }
+
+  .image.video{
+    width: 400px;
+    height: 400px;
+  }
+
+  .fraudDetection{
+    width: 100vw;
+    
+  }
+
+  section {
+    font-size: 2.5rem;
+    font-weight: 500;
+    flex-direction: column;
+  }
+
+  .reportSection{
+    margin-top: 5rem;
+  }
+
+  .reportSection>p{
+    width: 700px;
+    padding-top: 1rem;
+    margin-left: 13rem;
+  }
+
+  .span {
+    font-size: larger;
+    font-weight: bolder;
+  }
+}
